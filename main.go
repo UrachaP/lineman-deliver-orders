@@ -65,7 +65,6 @@ func dijkstra(grid [][]int, rows int, cols int, start, end Point) int {
 		node := heap.Pop(&stack).(*Node)
 		currentPoint := node.point
 		visited[currentPoint] = true
-		//test
 		// check go to end point
 		if currentPoint == end {
 			return dist[currentPoint.row][currentPoint.col]
@@ -90,7 +89,7 @@ func dijkstra(grid [][]int, rows int, cols int, start, end Point) int {
 func main() {
 	for i := 1; i <= 5; i++ {
 		startTime := time.Now()
-		input, err := os.ReadFile(fmt.Sprintf("in-%d.txt", i))
+		input, err := os.ReadFile(fmt.Sprintf("attd/in-%d.txt", i))
 		if err != nil {
 			panic(err)
 		}
